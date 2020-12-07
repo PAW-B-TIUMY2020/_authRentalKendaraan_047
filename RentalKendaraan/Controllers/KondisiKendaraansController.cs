@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using RentalKendaraan.Models;
 using RentalKendaraan_20180140047.Models;
 
 namespace RentalKendaraan_20180140047.Controllers
