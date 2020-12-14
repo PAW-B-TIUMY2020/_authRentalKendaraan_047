@@ -38,10 +38,14 @@ namespace RentalKendaraan
             services.AddDbContext<RentKendaraanContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<RentKendaraanContext>();
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddDefaultIdentity<IdentityUser>()
+            // .AddEntityFrameworkStores<RentKendaraanContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultUI()
+              .AddEntityFrameworkStores<RentKendaraanContext>().AddDefaultTokenProviders();
+
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
